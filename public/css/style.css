@@ -1,0 +1,12 @@
+.description{
+    font-size:16px;
+    border: 1px solid #636b6f;
+    border-radius: 10px;
+    padding:8px 8px 3px 8px;
+}
+.show-list li {
+    margin-bottom:10px;
+}
+.show-list li h2{
+    font-size: 23px;
+}

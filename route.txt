@@ -1,0 +1,25 @@
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
+| Domain | Method    | URI                    | Name             | Action                                                                 | Middleware   |
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
+|        | GET|HEAD  | /                      |                  | Closure                                                                | web          |
+|        | GET|HEAD  | api/user               |                  | Closure                                                                | api,auth:api |
+|        | GET|HEAD  | home                   | home             | App\Http\Controllers\HomeController@index                              | web,auth     |
+|        | GET|HEAD  | login                  | login            | App\Http\Controllers\Auth\LoginController@showLoginForm                | web,guest    |
+|        | POST      | login                  |                  | App\Http\Controllers\Auth\LoginController@login                        | web,guest    |
+|        | POST      | logout                 | logout           | App\Http\Controllers\Auth\LoginController@logout                       | web          |
+|        | POST      | password/email         | password.email   | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web,guest    |
+|        | POST      | password/reset         | password.update  | App\Http\Controllers\Auth\ResetPasswordController@reset                | web,guest    |
+|        | GET|HEAD  | password/reset         | password.request | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web,guest    |
+|        | GET|HEAD  | password/reset/{token} | password.reset   | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web,guest    |
+|        | POST      | register               |                  | App\Http\Controllers\Auth\RegisterController@register                  | web,guest    |
+|        | GET|HEAD  | register               | register         | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest    |
+|        | GET|HEAD  | reklama                | reklama.index    | App\Http\Controllers\Reklama\ReklamaController@index                   | web          |
+|        | POST      | reklama                | reklama.store    | App\Http\Controllers\Reklama\ReklamaController@store                   | web          |
+|        | GET|HEAD  | reklama/create         | reklama.create   | App\Http\Controllers\Reklama\ReklamaController@create                  | web          |
+|        | GET|HEAD  | reklama/message        | message          | App\Http\Controllers\Reklama\ReklamaController@message                 | web          |
+|        | GET|HEAD  | reklama/{id}           | show             | App\Http\Controllers\Reklama\ReklamaController@show                    | web          |
+|        | GET|HEAD  | reklama/{}             | reklama.show     | App\Http\Controllers\Reklama\ReklamaController@show                    | web          |
+|        | PUT|PATCH | reklama/{}             | reklama.update   | App\Http\Controllers\Reklama\ReklamaController@update                  | web          |
+|        | DELETE    | reklama/{}             | reklama.destroy  | App\Http\Controllers\Reklama\ReklamaController@destroy                 | web          |
+|        | GET|HEAD  | reklama/{}/edit        | reklama.edit     | App\Http\Controllers\Reklama\ReklamaController@edit                    | web          |
++--------+-----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
