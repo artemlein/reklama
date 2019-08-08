@@ -6,6 +6,7 @@ use App\Reklama;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repository\ReklamaRepository;
+use Illuminate\Support\Str;
 
 class ReklamaController extends Controller
 {
@@ -63,6 +64,19 @@ class ReklamaController extends Controller
     public function store(Request $request)
     {
         $data = $request->input();
+        $token = '67382ce611099f798d3153780ebe024dce20776bb0fcd82c1754f4503dab0e1fc469cc14b8f30dced18fa';
+
+        $user_slug = Str::after($request->url_vk, 'https://vk.com/id');
+        $user_slug = Str::after($user_slug, 'https://vk.com/');
+
+        $GET_getId = [
+            'user_ids' => $user_slug,
+            'access_token' => $token,
+            'v' => 5.101,
+        ];
+
+        $response = json_decode(file_get_contents('https://api.vk.com/method/users.get?'.http_build_query($GET_getId)));
+        $data['vkId'] = $response->response[0]->id;
 
         $channel = (new Reklama())->fill($data);
 

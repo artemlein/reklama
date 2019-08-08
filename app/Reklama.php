@@ -11,6 +11,6 @@ class Reklama extends Model
     public $table = 'reklama';
 
     protected $fillable = [
-        'id', 'name', 'url','price','url','like','shows','updateVideo','subscribe','vkId','status','message'
+        'id', 'name', 'url','price','url','like','shows','updateVideo','subscribe','vkId','status','message','url_vk'
     ];
 }

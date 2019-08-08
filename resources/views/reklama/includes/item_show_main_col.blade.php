@@ -28,6 +28,12 @@
                                 </div>
                             </li>
                             <li>
+                                <h2>Ссылка на человека(Кто предлогает)</h2>
+                                <div class="description">
+                                    <a href="{{ $channel->url_vk }}" target="_blank">{{ $channel->url_vk }}</a>
+                                </div>
+                            </li>
+                            <li>
                                 <h3>Подписчики</h3>
                                 <div class="description">
                                     {{ $channel->subscribe }}

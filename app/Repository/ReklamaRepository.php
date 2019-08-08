@@ -80,6 +80,7 @@ class ReklamaRepository extends CoreRepository
             'subscribe',
             'vkId',
             'status',
+            'url_vk',
         ];
 
         $result = $this->startConditions()

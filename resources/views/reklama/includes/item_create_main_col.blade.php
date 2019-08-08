@@ -97,9 +97,9 @@
 
                             >
                     </div> <div class="form-group">
-                            <label for="vkId">VK ID</label>
-                            <input  name="vkId"
-                                    id="vkId"
+                            <label for="url_vk">VK url</label>
+                            <input  name="url_vk"
+                                    id="url_vk"
                                     type="text"
                                     class="form-control"
                                     minlength="3"

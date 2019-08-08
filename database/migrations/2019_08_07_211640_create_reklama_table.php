@@ -18,6 +18,7 @@ class CreateReklamaTable extends Migration
             $table->string('name');
             $table->string('price');
             $table->string('url');
+            $table->string('url_vk');
             $table->string('subscribe');
             $table->integer('like');
             $table->integer('shows');
@@ -25,6 +26,7 @@ class CreateReklamaTable extends Migration
             $table->string('updateVideo');
             $table->integer('status')->default(0);
             $table->string('message')->default(0);
+
 
             $table->timestamps();
         });
